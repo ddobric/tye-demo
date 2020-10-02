@@ -51,3 +51,8 @@ You should see this dashboard:
 Navigate to one of two frontend urls. You should see following:
 
 <img src='https://user-images.githubusercontent.com/1756871/94919146-4436d280-04b4-11eb-98df-e60b436b814c.png' />
+
+If you navigate to the backend url (https://localhost:63973/swagger) you should see following:
+
+<img src='https://user-images.githubusercontent.com/1756871/94919339-a0015b80-04b4-11eb-9a0c-4aff6105ff14.png' />
+
