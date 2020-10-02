@@ -3,7 +3,7 @@ The solution consists of two projects:
 - frontend and
 - backend
 
-Front end configuration must hold the correct URL of the backend:
+If you want to develop and debug the demo application, please note that the configuration of the *frontend* must hold the correct URL of the backend:
 
 ~~~
 {
@@ -19,8 +19,9 @@ Front end configuration must hold the correct URL of the backend:
 }
 ~~~
 
+When running allin with Tye (in KUbernetes), this configuration entry is not required. The url is in that case looked up by the Tye runtime.
 
-Run the tye command line in the folder with the solution.
+To run the system locally, do following. Run the *tye* command line in the folder with the solution.
 
 ~~~
 tye run
@@ -43,3 +44,10 @@ Now, you can navigate to the Tye dashboard:
 ~~~
 http://127.0.0.1:8000
 ~~~
+
+You should see this dashboard:
+<img src='https://user-images.githubusercontent.com/1756871/94914236-e94cad80-04aa-11eb-9b73-4c749e17935a.png' />
+
+Navigate to one of two frontend urls. You should see following:
+
+<img src='https://user-images.githubusercontent.com/1756871/94919146-4436d280-04b4-11eb-98df-e60b436b814c.png' />
