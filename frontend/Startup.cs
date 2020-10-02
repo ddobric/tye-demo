@@ -28,6 +28,8 @@ namespace frontend
             services.AddHttpClient<WeatherClient>(client =>
             {
                 client.BaseAddress = Configuration.GetServiceUri("backend");
+                if (client.BaseAddress == null)
+                    client.BaseAddress = new Uri(Configuration["backend"]);
             });
         }
 
