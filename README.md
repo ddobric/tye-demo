@@ -1,4 +1,4 @@
-# Let's start with the **TYE**
+
 The solution in the repository consists two projects:
 - frontend and
 - backend
