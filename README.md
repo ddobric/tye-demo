@@ -3,7 +3,7 @@ The solution in the repository consists two projects:
 - frontend and
 - backend
 
-*frontend* is an APS.NET Core application that invokes the REST service hosted in  the *backend*.
+*frontend* is an ASP.NET Core application that invokes the REST service hosted in  the *backend*.
 If you want to develop and debug the demo application, please note that the configuration of the *frontend* must hold the correct URL of the backend:
 
 ~~~
