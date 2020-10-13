@@ -89,6 +89,30 @@ If you navigate to the Kubernetes service in the Azure Portal you will notice ou
 
 <img src="https://user-images.githubusercontent.com/1756871/94922793-199c4800-04bb-11eb-9150-1d46f69ddfa2.png">
 
+#### Test it out!
+
+You should now see two pods running after deploying.
+
+kubectl get pods
+NAME                                             READY   STATUS    RESTARTS   AGE
+backend-ccfcd756f-xk2q9                          1/1     Running   0          85m
+frontend-84bbdf4f7d-6r5zp                        1/1     Running   0          85m
+You'll have two services in addition to the built-in kubernetes service.
+
+kubectl get service
+NAME         TYPE        CLUSTER-IP    EXTERNAL-IP   PORT(S)   AGE
+backend      ClusterIP   10.0.147.87   <none>        80/TCP    11s
+frontend     ClusterIP   10.0.20.168   <none>        80/TCP    14s
+kubernetes   ClusterIP   10.0.0.1      <none>        443/TCP   3d5h
+You can visit the frontend application by port forwarding to the frontend service.
+
+kubectl port-forward svc/frontend 5000:80
+Now navigate to http://localhost:5000 to view the frontend application working on Kubernetes. You should see the list of weather forecasts just like when you were running locally.
+
+💡 Currently tye does not provide a way to expose pods/services created to the public internet. We'll add features related to Ingress in future releases.
+
+⚠️ Currently tye does not automatically enable TLS within the cluster, and so communication takes place over HTTP instead of HTTPS. This is typical way to deploy services in kubernetes - we may look to enable TLS as an option or by default in the future.
+
 For more information see: 
 Tutorial: https://github.com/dotnet/tye/blob/master/docs/tutorials/hello-tye/00_run_locally.md
 Deploying: https://github.com/dotnet/tye/blob/master/docs/tutorials/hello-tye/01_deploy.md
