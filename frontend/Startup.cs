@@ -27,7 +27,10 @@ namespace frontend
 
             services.AddHttpClient<WeatherClient>(client =>
             {
+                // Service URL is injected by Kubernetes
                 client.BaseAddress = Configuration.GetServiceUri("backend");
+
+                // If running locally, we grab the local URL.
                 if (client.BaseAddress == null)
                     client.BaseAddress = new Uri(Configuration["backend"]);
             });
