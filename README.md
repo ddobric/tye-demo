@@ -4,7 +4,7 @@ The solution in the repository consists two projects:
 - backend
 
 *frontend* is an ASP.NET Core application that invokes the REST service hosted in  the *backend*.
-If you want to develop and debug the demo application, please note that the configuration of the *frontend* must hold the correct URL of the backend:
+If you want to develop and debug the demo application locally, the configuration of the *frontend* **must** hold the correct URL of the backend:
 
 ~~~
 {
@@ -20,7 +20,7 @@ If you want to develop and debug the demo application, please note that the conf
 }
 ~~~
 
-When running all with Tye in Kubernetes, this configuration entry is not required. The url is in that case looked up by the Tye runtime.
+When running all with Tye in Kubernetes, this configuration entry is **NOT** required. The url is in that case looked up by the Tye runtime.
 
 To run the system locally, do following. Run the *tye* command line in the folder with the solution.
 
