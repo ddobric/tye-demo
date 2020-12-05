@@ -20,7 +20,7 @@ If you want to develop and debug the demo application locally, the configuration
 }
 ~~~
 
-When running all with Tye in Kubernetes, this configuration entry is **NOT** required. The url is in that case looked up by the Tye service discovery by using `Microsoft.Tye.Extensions.Configuration`.
+When running all with Tye in Kubernetes, the configuration entry for the service URL is **NOT** required. The url is in that case looked up by the Tye service discovery by using `Microsoft.Tye.Extensions.Configuration`.
 To run the system locally, do following. Run the *tye* command line in the folder with the solution.
 
 ~~~
